@@ -11,7 +11,6 @@ h1, h2{
 .car-info{
     flex-direction: column;
     justify-content: center;
-    font-family: 'Comfortaa', cursive;
 }
 .buttons-func{
     text-align: center;
@@ -21,6 +20,7 @@ h1, h2{
 }
 .btn-primary:focus{
     box-shadow: none;
+    border: none;
 }
 .warning span, .gasoline-over{
     color: red;
@@ -33,9 +33,12 @@ h1, h2{
 }
 .current-state{
     margin-top: 30px;
-    font-family: 'Comfortaa', cursive;
 }
 .current-state span {
     display: block;
     font-style: italic;
+}
+.disable{
+    background-color: grey;
+    pointer-events: none;
 }

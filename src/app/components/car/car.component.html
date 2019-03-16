@@ -5,15 +5,15 @@
     <div class="col-7 car-img"><img src="{{carInfo.img}}" alt=""></div>
     <div class="col-5 car-info d-flex">
       <div *ngFor="let el of carInfo.specifications">— {{el}}</div>
-      <div class="current-state"><span>Пробег: {{carInfo.mileage}} км</span><span>Количество топлива: {{carInfo.fuel}} л</span></div>
+      <div class="current-state"><span>Mileage: {{carInfo.mileage}} km</span><span>Fuel: {{carInfo.fuel}} l</span></div>
     </div>
   </div>
   <div class="buttons-func">
-    <button class="btn btn-primary" (click)="drive()">Vrooooooooom</button>
-    <button class="btn btn-success" *ngIf="carInfo.fuel == 0" (click)="refuel()">Free gas!</button>
+    <button class="btn btn-primary" [class.disable]="!carInfo.fuel" (click)="drive()">Vrooooooooom</button>
+    <button class="btn btn-success" *ngIf="carInfo.fuel == 0" (click)="refuel()">Free petrol!</button>
   </div>
   
-  <div class="warning" *ngIf="carInfo.fuel<3 && carInfo.fuel>0"><span>Warning!!!</span> Gasoline runs out, you must find a gas station.</div>
-  <div class="gasoline-over" *ngIf="carInfo.fuel == 0">Sorry, gasoline is over...</div>
+  <div class="warning" *ngIf="carInfo.fuel<3 && carInfo.fuel>0"><span>Warning!!!</span> Petrol runs out, you must find a gas station.</div>
+  <div class="gasoline-over" *ngIf="carInfo.fuel == 0">Sorry, petrol is over...</div>
 </div>
 
