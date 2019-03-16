@@ -1,5 +1,5 @@
 <div class="car-app-wrap container-fluid">
-  <h1 id="blink">Application {{carInfo.name}} car</h1>
+  <h1 class="blink">Application {{carInfo.name}} car</h1>
   <h2>Car info</h2>
   <div class="row">
     <div class="col-7 car-img"><img src="{{carInfo.img}}" alt=""></div>
@@ -9,8 +9,8 @@
     </div>
   </div>
   <div class="buttons-func">
-    <button class="btn btn-primary" [class.disable]="!carInfo.fuel" (click)="drive()">Vrooooooooom</button>
-    <button class="btn btn-success" *ngIf="carInfo.fuel == 0" (click)="refuel()">Free petrol!</button>
+    <button class="btn btn-primary" [class.blink]="carInfo.fuel" [class.disable]="!carInfo.fuel" (click)="drive()">Vrooooooooom</button>
+    <button class="btn btn-success blink" *ngIf="carInfo.fuel == 0" (click)="refuel()">Free petrol!</button>
   </div>
   
   <div class="warning" *ngIf="carInfo.fuel<3 && carInfo.fuel>0"><span>Warning!!!</span> Petrol runs out, you must find a gas station.</div>

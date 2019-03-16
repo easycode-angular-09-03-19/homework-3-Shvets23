@@ -18,6 +18,10 @@ h1, h2{
 .buttons-func button + button{
     margin-left: 30px;
 }
+button{
+    font-weight: bold;
+    font-size: 18px;
+}
 .btn-primary:focus{
     box-shadow: none;
     border: none;
@@ -49,7 +53,7 @@ h1, h2{
    @keyframes pulsate {
     50% { color: #fff; text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 5px #ffd, 0 0 8px #fff; }
    }
-   #blink {
+   .blink {
      color: rgb(245,245,245);
      text-shadow: 0 -1px rgba(0,0,0,.1);
      -webkit-animation: pulsate 1.2s linear infinite;
