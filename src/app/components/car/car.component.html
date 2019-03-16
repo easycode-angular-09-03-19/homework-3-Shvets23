@@ -1,0 +1,19 @@
+<div class="car-app-wrap">
+  <h1>Application {{carInfo.name}} car</h1>
+  <h2>Car info</h2>
+  <div class="row">
+    <div class="col-7 car-img"><img src="{{carInfo.img}}" alt=""></div>
+    <div class="col-5 car-info d-flex">
+      <div *ngFor="let el of carInfo.specifications">— {{el}}</div>
+      <div class="current-state"><span>Пробег: {{carInfo.mileage}} км</span><span>Количество топлива: {{carInfo.fuel}} л</span></div>
+    </div>
+  </div>
+  <div class="buttons-func">
+    <button class="btn btn-primary" (click)="drive()">Vrooooooooom</button>
+    <button class="btn btn-success" *ngIf="carInfo.fuel == 0" (click)="refuel()">Free gas!</button>
+  </div>
+  
+  <div class="warning" *ngIf="carInfo.fuel<3 && carInfo.fuel>0"><span>Warning!!!</span> Gasoline runs out, you must find a gas station.</div>
+  <div class="gasoline-over" *ngIf="carInfo.fuel == 0">Sorry, gasoline is over...</div>
+</div>
+

@@ -1,0 +1,41 @@
+.car-app-wrap{
+    color: white;
+    margin-top: 50px;
+}
+h1, h2{
+    text-align: center;
+}
+.car-img img{
+    width: 100%;
+}
+.car-info{
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Comfortaa', cursive;
+}
+.buttons-func{
+    text-align: center;
+}
+.buttons-func button + button{
+    margin-left: 30px;
+}
+.btn-primary:focus{
+    box-shadow: none;
+}
+.warning span, .gasoline-over{
+    color: red;
+    font-weight: bold;
+}
+.warning, .gasoline-over{
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: center;
+}
+.current-state{
+    margin-top: 30px;
+    font-family: 'Comfortaa', cursive;
+}
+.current-state span {
+    display: block;
+    font-style: italic;
+}
