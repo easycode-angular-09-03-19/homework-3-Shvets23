@@ -14,14 +14,14 @@ export class CarComponent implements OnInit {
     specifications: ['Engine: 1.6-litre 120.7bhp Petrol Engine;', 'Top Speed: 197km/hr;', 'Fuel Tank Capacity: 40 Liters;', 'TransmissionType: Automatic;']
   }
   constructor() { }
-  drive() {
+  public drive(): void {
     if (this.carInfo.fuel >0){
       --this.carInfo.fuel;
       this.carInfo.mileage += 10;
     }
     
   }
-  refuel() {
+  public refuel(): void {
     this.carInfo.fuel += 5;
   }
   ngOnInit() {
